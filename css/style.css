@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    scroll-behavior: smooth;
+    
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url(../Fonts/bahnschrift.ttf);
+    font-weight: light;
+    font-style: light;
+}
+
+@font-face {
+    font-family: 'Monograph';
+    src: url(../Fonts/Monograf.ttf);
+    
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url(../Fonts/Oswald-VariableFont_wght.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+
+
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+
+
+
+/* HEADER (MENU) */
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: #171816 !important;
+}
+
+header{
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    
+    background-color: #171816;
+}
+
+#head_title {
+    padding-left: 3%;
+}
+
+#head_title a{
+    font-size: 2em;
+    font-family: 'Oswald';
+    align-items: center;
+}
+
+.nav{
+    justify-content: center;
+}
+
+#navbarNav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 1em;
+    border-radius: 45px; 
+}
+
+.nav-link {
+    color: #EAEAEA;
+    border-style: none;
+    background-color: #171816;
+    border-radius: 25px; 
+    
+}
+
+.nav-link:hover {
+    color: #171816;
+    border-style: none;
+    background-color: #EAEAEA;
+}
+
+/* main */
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 12%;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#Universe_card_home {
+
+    padding: 50px 50px;
+    border-radius: 0.2em;
+    height: 60vh;
+    width: 95%;
+    background-image: url(/media/Bosque_still_v1_0003.png);
+    background-color: #171816;
+    display: flex;
+    
+}
+
+h2 {
+    font-size: 2em;
+    font-family: 'Oswald';
+    color: #eaeaea;
+    z-index: 1;
+}
+
+p {
+    font-size: 1em;
+    font-family: 'Bahnschrift';
+    color: #949485;
+    z-index: 1;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img_card01 {
+    margin-top: 2em;
+    padding: 50px 50px;
+    background-image: url(/media/IA_proyect_gal-07-07.png);
+}
+
+#img_card02 {
+    margin-top: 2em;
+    padding: 50px 50px;
+    background-image: url(/media/Playground_card_img.jpg);
+}
+
+
+#btn {
+    align-items: flex-start;
+}
+
+.btn_explorar {
+    color: #EAEAEA;
+    border-style: none;
+    background-color: #C1413D;
+    border-radius: 4px; 
+    font-size: 2em;
+    font-family: 'Oswald';
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn_explorar:hover {
+    color: #C1413D;
+    border-style: none;
+    background-color: #EAEAEA;
+}
+
+#container3D canvas {
+    width: 100vw !important;
+    height: 100vh !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#Cards2row_Home {
+    width: 95%;
+    padding-top: 2%;
+}
+
+/* VIDEO BACK */
+
+.video-background-container {
+    
+    
+    height: 60vh;
+    width: 95%;
+    overflow: hidden;
+    z-index: -1; /* Asegura que el video esté detrás del contenido */
+}
+
+#video-background {
+    
+    background: no-repeat;
+    background-size: cover;
+}
+
+/* VIDEO JIMMY */
+
+.media-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.project-image, .project-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.project-video {
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.project:hover .project-image {
+    opacity: 0;
+}
+
+.project:hover .project-video {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.project-title {
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+.project:hover .project-title {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.project-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 10; 
+}
+
+.project-title h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+
+
+/* Milestones card Home */
+
+#Milestones_card_home {
+    padding: 50px 50px;
+    border-radius: 0.2em;
+    width: 100%;
+    background-color: #3b69ca;
+    display: flex;
+    flex-direction: column;
+}
+
+.h_milestones {
+    color: #171816;
+}
+
+.p_milestones {
+    color: #171816;
+}
+
+.btn_proyectos {
+    color: #171816;
+    border-style: none;
+    background-color: #EAEAEA;
+    border-radius: 4px; 
+    font-size: 2em;
+    font-family: 'Oswald';
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn_proyectos:hover {
+    color: #EAEAEA;
+    border-style: none;
+    background-color: #171816;
+}
+
+/* Playground Card Home */
+
+#Playground_card_home {
+    padding: 50px 50px;
+    border-radius: 0.2em;
+    width: 100%;
+    background-color: #C1413D;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.h_playground {
+    color: #171816;
+}
+
+.p_playground {
+    color: #EAEAEA;
+}
+
+.btn_visitar {
+    color: #EAEAEA;
+    border-style: none;
+    background-color: #171816;
+    border-radius: 4px; 
+    font-size: 2em;
+    font-family: 'Oswald';
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn_visitar:hover {
+    color: #171816;
+    border-style: none;
+    background-color: #EAEAEA;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 4em;
+    padding: 5%;
+    background-color: #171816;
+}
+
+
+
+#h1_footer h1 {
+    padding-top: 5%;
+    font-size: 8em;
+    color: #3b69ca;;
+}
+
+
+#headabout{
+    padding-bottom: 3em;
+    align-items: center;
+    
+}
+
+#headabout>div>div>h2{
+    text-align: left;
+}

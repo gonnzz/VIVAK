@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url(../Fonts/bahnschrift.ttf);
+    font-weight: light;
+    font-style: light;
+}
+
+@font-face {
+    font-family: 'Monograph';
+    src: url(../Fonts/Monograf.ttf);
+    
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url(../Fonts/Oswald-VariableFont_wght.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+@import url(https://fonts.google.com/specimen/Oswald);
+
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .space-mono-regular {
+      font-family: "Space Mono", monospace;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .space-mono-bold {
+      font-family: "Space Mono", monospace;
+      font-weight: 700;
+      font-style: normal;
+    }
+    
+    .space-mono-regular-italic {
+      font-family: "Space Mono", monospace;
+      font-weight: 400;
+      font-style: italic;
+    }
+    
+    .space-mono-bold-italic {
+      font-family: "Space Mono", monospace;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+/* HEADER (MENU) */
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: #171816 !important;
+}
+
+header{
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    
+    background-color: #171816;
+}
+
+#head_title {
+    padding-left: 3%;
+}
+
+#head_title a{
+    font-size: 2em;
+    font-family: 'Oswald';
+    align-items: center;
+}
+
+.nav{
+    justify-content: center;
+}
+
+#navbarNav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 1em;
+    border-radius: 45px; 
+}
+
+.nav-link {
+    color: #EAEAEA;
+    border-style: none;
+    background-color: #171816;
+    border-radius: 25px; 
+    
+}
+
+.nav-link:hover {
+    color: #171816;
+    border-style: none;
+    background-color: #EAEAEA;
+}
+
+/* main */
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 12%;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
+.about {
+    padding: 50px 50px;
+    border-radius: 0.2em;
+    width: 95%;
+    background-color: #EAEAEA;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+#about_icons {
+    width: 50%;
+    height: auto;
+    margin-left: 50%;
+}
+
+.about_img {
+    
+    border-radius: 0.2em;
+    
+    width: 95%;
+    
+    background-color: #171816;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: 'Oswald';
+}
+
+p {
+    font-family: 'Bahnschrift';
+}
+
+.filosofia {
+    padding: 50px 50px;
+    border-radius: 0.2em;
+    width: 95%;
+    background-color: #919191;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards_filo {
+    padding: 50px 50px;
+    border-radius: 0.2em;
+    width: 95%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+#objetivos {
+    padding: 50px 50px;
+    border-radius: 0.2em;
+    width: 100%;
+    background-color: #171816;;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+#valores {
+    padding: 50px 50px;
+    border-radius: 0.2em;
+    width: 100%;
+    background-color: #171816;;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.h_objetivos {
+    color: #EAEAEA;
+}
+
+.p_objetivos {
+    color: #C1413D;
+}
+
+.h_valores {
+    color: #EAEAEA;
+}
+
+.p_valores {
+    color: #3b69ca;
+}
+
+/* POPOVER  */
+
+.custom-popover1 {
+    --bs-popover-max-width: 200px;
+    --bs-popover-border-color: var(--bd-violet-bg);
+    --bs-popover-header-bg: var(--bd-violet-bg);
+    --bs-popover-header-color: #C1413D;
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+  }
+
+  .custom-popover2 {
+    --bs-popover-max-width: 200px;
+    --bs-popover-border-color: var(--bd-violet-bg);
+    --bs-popover-header-bg: var(--bd-violet-bg);
+    --bs-popover-header-color: #3b69ca;
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+  }
+
+  .btn_valores {
+    text-align: center;
+    border-radius: 0.2em;
+    padding: 1em;
+    background-color: #3b69ca;
+    font-family: 'Bahnschrift';
+    color: #EAEAEA;
+    text-decoration: none;
+    font-style: none;
+  }
+
+  .btn_objetivos {
+    text-align: center;
+    border-radius: 0.2em;
+    padding: 1em;
+    background-color: #C1413D;
+    font-family: 'Bahnschrift';
+    color: #EAEAEA;
+    text-decoration: none;
+    font-style: none;
+  }
+
+
+/* Footer */
+
+footer {
+    margin-top: 4em;
+    padding: 5%;
+    background-color: #171816;
+}
+
+
+
+#h1_footer h1 {
+    padding-top: 5%;
+    font-size: 8em;
+    color: #3b69ca;;
+}
+
+
+#headabout{
+    padding-bottom: 3em;
+    align-items: center;
+    
+}
+
+#headabout>div>div>h2{
+    text-align: left;
+}
+
+#h2footer {
+    color: #EAEAEA;
+}
+
+#p_footer {
+    color: #EAEAEA;
+}

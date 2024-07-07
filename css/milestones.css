@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url(../Fonts/bahnschrift.ttf);
+  font-weight: light;
+  font-style: light;
+}
+
+@font-face {
+  font-family: 'Monograph';
+  src: url(../Fonts/Monograf.ttf);
+  
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url(../Fonts/Oswald-VariableFont_wght.ttf);
+  font-weight: bold;
+  font-style: bold;
+}
+
+@import url(https://fonts.google.com/specimen/Oswald);
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+/* HEADER (MENU) */
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: #171816 !important;
+}
+
+header{
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    
+    background-color: #070707;
+}
+
+
+
+#head_title a{
+    font-size: 2em;
+    font-family: 'Oswald';
+    align-items: center;
+}
+
+.nav{
+    justify-content: center;
+}
+
+#navbarNav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 1em;
+    border-radius: 45px; 
+}
+
+.nav-link {
+    color: #EAEAEA;
+    border-style: none;
+    background-color: #171816;
+    border-radius: 25px; 
+    
+}
+
+.nav-link:hover {
+    color: #171816;
+    border-style: none;
+    background-color: #EAEAEA;
+}
+
+/* main */
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item {
+    width: 20%;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .container-general {
+    padding: 75px 0;
+    margin: 0 auto;
+    width: 800px;
+    .gallery-wrap {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 70vh;
+      .item {
+        flex: 1;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: none;
+        transition: all 0.8s ease;
+        &:hover {
+          flex: 7;
+        }
+      }
+    }
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 90%;
+  }
+  .swiper-slide {
+    text-align: center;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .container-general {
+    padding: 75px 0;
+    margin: 0 auto;
+    width: 800px;
+    .gallery-wrap {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 70vh;
+      .item {
+        flex: 1;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: none;
+        transition: all 0.8s ease;
+        &:hover {
+          flex: 7;
+        }
+      }
+    }
+  }
+
+.wrap-effect-3 {
+  .item {
+    &:hover {
+      animation: rotate 0.7s ease-in-out both;
+      border-radius: 10px;
+      border: 0.5px solid rgb(255, 255, 255);
+    }
+    &:first-of-type {
+      background-image: url(/media/Fox_proyect_gal-07.png);
+    }
+    &:nth-of-type(2) {
+      background-image: url(/media/IA_proyect_gal-07-07.png);
+    }
+    &:nth-of-type(3) {
+      background-image: url(/media/Rock_proyect_gal.png);
+    }
+  }
+}
+
+/* MODAL PRXIMAMENTE  */
+
+.modal.show .modal-dialog {
+  transform: none;
+  top: 40% !important;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: var(--bs-modal-padding);
+  font-family: 'Oswald' !important;
+  font-size: 3em !important;
+  color: #171816 !important;
+}
+
+.modal-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--bs-modal-header-padding);
+  border-bottom: var(--bs-modal-header-border-width) solid #111213;
+  border-top-left-radius: var(--bs-modal-inner-border-radius);
+  border-top-right-radius: var(--bs-modal-inner-border-radius);
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--bs-modal-color);
+  pointer-events: auto;
+  background-color: #C1413D;
+  background-clip: padding-box;
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+  border-radius: var(--bs-modal-border-radius);
+  outline: 0;
+}
+
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(10deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-10deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(5deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0)
+    }
+  }
+  
+
+  
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 700px) {
+
+ 
+
+}
+
